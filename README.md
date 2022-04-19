@@ -83,15 +83,12 @@ Handle the - flag character for non-custom conversion specifiers.
 
 Print is the sharpest and the strongest weapon of our party
 Handle the following custom conversion specifier:
-
 r : prints the reversed string
 
 The flood of print has turned reading into a process of gulping rather than savoring
 Handle the following custom conversion specifier:
-
 R: prints the rot13'ed string
 
-16. *
 All the above options work well together
 
 This is a team project by Lynne Michuki and Candy Chebet.
