@@ -1,95 +1,35 @@
-The _printf() function produces output according to a format which is described 
-I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life.
+# printf
 
-*Write a function that produces output according to a format.
-Prototype: int _printf(const char *format, ...);
-Returns: the number of characters printed (excluding the null byte used to end output to strings)
-write output to stdout, the standard output stream
-format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-c
-s
-%
-You don’t have to reproduce the buffer handling of the C library printf function
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
+### The project involved implementing our own version of the printf function in C. This function handled various conversion specifiers and formatting options. Here's a brief overview of the tasks involved:
 
-*Education is when you read the fine print. Experience is what you get if you don't.
-Handle the following conversion specifiers:
-d
-i
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
+**Task 0:** Implement the basic functionality of _printf function that handles conversion specifiers 'c', 's', and '%'. It should take a format string and variable arguments and produce output according to the format.
 
-*Just because it's in print doesn't mean it's the gospel
-Create a man page for your function.
+**Task 1:** Extend _printf to handle conversion specifiers 'd' and 'i' for signed decimal integers.
 
-*With a face like mine, I do better in print
-Handle the following custom conversion specifiers:
-b: the unsigned int argument is converted to binary
+**Task 2:** Add support for a custom conversion specifier 'b' that converts an unsigned integer argument to binary.
 
-*What one has not experienced, one will never understand in print
-Handle the following conversion specifiers:
-u
-o
-x
-X
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
+**Task 3:** Handle conversion specifiers 'u', 'o', 'x', and 'X' for unsigned integers in decimal, octal, and hexadecimal formats.
 
-*Nothing in fine print is ever good news
-Use a local buffer of 1024 chars in order to call write as little as possible.
+**Task 4:** Optimize the implementation by using a local buffer of 1024 characters and minimizing the number of calls to the write function.
 
-*My weakness is wearing too much leopard print
-Handle the following custom conversion specifier:
+**Task 5:** Implement a custom conversion specifier 'S' that prints strings, handling non-printable characters using the '\x' format.
 
-S : prints the string. Non printable characters (0 < ASCII value < 32 or >= 127) are pr inted this way: \x, followed by the ASCII code value in hexadeci mal (upper case - always 2 characters
+**Task 6:** Add support for the 'p' conversion specifier, which prints the memory address of a pointer.
 
-*How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
-Handle the following conversion specifier: p.
+**Task 7:** Handle flag characters '+', ' ', and '#' for non-custom conversion specifiers.
 
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
+**Task 8:** Implement length modifiers 'l' and 'h' for conversion specifiers 'd', 'i', 'u', 'o', 'x', and 'X'.
 
-*The big print gives and the small print takes away
-Handle the following flag characters for non-custom conversion specifiers:
+**Task 9:** Handle field width for non-custom conversion specifiers.
 
-space
+**Task 10:** Support precision for non-custom conversion specifiers.
 
-*Sarcasm is lost in print
-Handle the following length modifiers for non-custom conversion specifiers:
+**Task 11:** Handle the '0' flag character for non-custom conversion specifiers.
 
-l
-h
-Conversion specifiers to handle: d, i, u, o, x, X
+**Task 12:** Implement the '-' flag character for non-custom conversion specifiers.
 
-*Print some money and give it to us for the rain forests
-Handle the field width for non-custom conversion specifiers.
+**Task 13:** Add a custom conversion specifier 'r' that prints the reversed string.
 
-*The negative is the equivalent of the composer's score, and the print the performance
-Handle the precision for non-custom conversion specifiers.
+**Task 14:** Implement a custom conversion specifier 'R' that prints the ROT13-encrypted string.
 
-*It's depressing when you're still around and your albums are out of prin
-Handle the 0 flag character for non-custom conversion specifiers.
-
-*Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
-Handle the - flag character for non-custom conversion specifiers.
-
-*Print is the sharpest and the strongest weapon of our party
-Handle the following custom conversion specifier:
-r : prints the reversed string
-
-*The flood of print has turned reading into a process of gulping rather than savoring
-Handle the following custom conversion specifier:
-R: prints the rot13'ed string
-
-*All the above options work well together
-
-This is a team project by Lynne Michuki and Candy Chebet.
+***This is a team project by Lynne Michuki and Candy Chebet.***
